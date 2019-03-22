@@ -27,7 +27,7 @@ class dbFunctions
                 FROM zaposleni 
                 LIMIT " . ($pageNum - 1)*$pageSize . ", " . $pageSize;
         $sqlResult = mysqli_query($this->db_conn, $sql);
-//        var_export($sql);
+//       
         
         if (mysqli_num_rows($sqlResult) > 0){
             while($row = mysqli_fetch_assoc($sqlResult)) {
